@@ -2,13 +2,23 @@ import React from "react";
 import { toDarkMode, toLightMode } from "../../Store/Slices/colorMode";
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "../Nav";
-
+import Cookies from "js-cookie";
+import i18n from "i18next";
 const Header = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
   const dispatch = useDispatch();
 
   let navStatus = false;
 
+  const lng = Cookies.get("i18next") || "en";
+
+  const toggleLanguage = () => {
+    if (lng === "en") {
+      i18n.changeLanguage("ar");
+    } else if (lng === "ar") {
+      i18n.changeLanguage("en");
+    }
+  };
   const openNav = () => {
     navStatus = !navStatus;
   };
@@ -86,7 +96,7 @@ const Header = () => {
         <div className=" flex gap-4 items-center ">
           <button>Hire Me</button>
 
-          <div className="cursor-pointer">
+          <div className="cursor-pointer" onClick={toggleLanguage}>
             <i className="pi pi-language" style={{ fontSize: "1.5rem" }}></i>
           </div>
 
