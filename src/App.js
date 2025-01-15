@@ -6,37 +6,6 @@ function App() {
     <div className="App">
       <Header />
       <MainPage />
-      <div>sssssssssssssssssssaaaaaaaaaahhh</div>
-      <div>sssssssssssssssssssaaaaaaaaaahhh</div>
-      <div>sssssssssssssssssssaaaaaaaaaahhh</div>
-      <div>sssssssssssssssssssaaaaaaaaaahhh</div>
-      <div>sskkkkkkkkkkkkkkkk</div>
-      <div>sskkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjj</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
-      <div>sskkkkkkkkkkkkkkkzzzzzzzzzzssswwzzk</div>
     </div>
   );
 }
