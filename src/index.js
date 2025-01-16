@@ -7,9 +7,6 @@ import { Provider } from "react-redux";
 import { PrimeReactProvider } from "primereact/api";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import "primeicons/primeicons.css";
-// import { IntlProvider } from "react-intl";
-// import enMessages from "./lang/en.json";
-// import arMessages from "./lang/ar.json";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

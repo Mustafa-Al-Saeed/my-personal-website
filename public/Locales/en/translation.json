@@ -1,3 +1,8 @@
 {
-  "Welcome to React": "Welcome to React and react-i18next"
+  "Home": "Home",
+  "Services": "Services",
+  "About me": "About me",
+  "Portfolio": "Portfolio",
+  "Contact me": "Contact me",
+  "Download CV": "Download CV"
 }
