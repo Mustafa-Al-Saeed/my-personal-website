@@ -49,7 +49,9 @@ const Header = () => {
     <div
       ref={myRef}
       className={` ${
-        isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
+        isLight
+          ? "bg-white relative text-[#030712]"
+          : "bg-[#030712] text-[#D1D5DB]"
       } flex items-center justify-between h-[68px] p-3 lg:px-20  `}
     >
       <a className="text-xl font-bold hidden md:block  " href="#">
@@ -72,23 +74,18 @@ const Header = () => {
         )}
       </div>
 
-      <div className=" flex items-center">
+      <div className=" flex items-center overflow-hidden ">
         <ul
-          className={` transition-all top-[68px] overflow-hidden duration-[1000ms] absolute px-3 left-0 ${
-            listStatus ? "h-[240px]" : "h-0"
-          } w-full md:relative md:top-0 md:flex md:items-center md:gap-5  md:text-center ${
-            lng == "en"
-              ? "border-r-[#1F2937] border-r-[1px]"
-              : lng == "ar"
-              ? "border-l-[#1F2937] border-l-[1px]"
-              : ""
-          } ${
-            isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
-          }  `}
+          className={` overflow-hidden ${
+            listStatus ? "h-[305px]" : "h-0 md:h-[68px]"
+          } transition-all duration-[3000] absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 bg-[#030712] w-full md:w-fit`}
         >
           {links.map((link, index) => (
-            <li key={index} className=" p-3 md:p-0 hover:text-[#38BDF8]">
-              <a className="transition-all cursor-pointer " href={link.path}>
+            <li
+              key={index}
+              className=" flex items-center p-3 md:p-0 hover:text-[#38BDF8]"
+            >
+              <a className=" cursor-pointer " href={link.path}>
                 {t(link.name)}
               </a>
             </li>
@@ -137,3 +134,15 @@ const Header = () => {
 };
 
 export default Header;
+
+// className={`  h-[68px] duration-[3000ms]  overflow-hidden  absolute px-3 left-0 ${
+//   listStatus ? "h-[240px] " : "h-[0px] md:h-[68px] "
+// } w-full md:relative md:top-0 md:flex md:items-center md:gap-5  md:text-center ${
+//   lng == "en"
+//     ? "border-r-[#1F2937] border-r-[1px]"
+//     : lng == "ar"
+//     ? "border-l-[#1F2937] border-l-[1px]"
+//     : ""
+// } ${
+//   isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
+// }  `}
