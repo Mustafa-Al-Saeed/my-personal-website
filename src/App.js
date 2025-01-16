@@ -43,7 +43,6 @@ function App() {
     <div className="App">
       <Header />
       <MainPage />
-      <h2>{t("Welcome to React")}</h2>
     </div>
   );
 }

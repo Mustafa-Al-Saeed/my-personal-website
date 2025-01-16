@@ -78,7 +78,11 @@ const Header = () => {
         <ul
           className={` overflow-hidden ${
             listStatus ? "h-[305px]" : "h-0 md:h-[68px]"
-          } transition-all duration-[3000] absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 bg-[#030712] w-full md:w-fit`}
+          } transition-all absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 ${
+            isLight
+              ? "bg-white md:bg-transparent"
+              : "bg-[#030712] md:bg-transparent"
+          } w-full md:w-fit`}
         >
           {links.map((link, index) => (
             <li

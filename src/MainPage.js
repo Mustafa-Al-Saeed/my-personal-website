@@ -1,7 +1,9 @@
+import Home from "./Components/Home";
+
 const MainPage = () => {
   return (
     <div>
-      <div></div>
+      <Home />
     </div>
   );
 };
