@@ -1,13 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import myPic from "../assets/Images/pic.jpg";
+import Cookies from "js-cookie";
+import PicShape from "./Shared/PicShape";
+
 const Home = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
   const { t } = useTranslation();
+  const lng = Cookies.get("i18next") || "en";
 
   return (
     <div
-      className={`flex gap-12 flex-col md:flex-row md:py-8 py-4 px-2 md:px-4 ${
+      className={`flex gap-12 flex-col md:flex-row pb-8 md:pt-[72px] pt-[44px] md:px-4 py-4 px-3 ${
         isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-white"
       } `}
     >
@@ -48,11 +52,7 @@ const Home = () => {
           </ul>
         </div>
 
-        <div
-          className={`order-1 md:order-2 w-[320px] h-[360px] mx-auto z-[1] relative before:absolute before:right-0 before:bottom-0  before:bg-[#374151] before:w-[280px] before:h-[320px] before:z-[-1]`}
-        >
-          <img className={`w-[280px] h-[320px] `} src={myPic} alt="" />
-        </div>
+        <PicShape />
       </div>
     </div>
   );
