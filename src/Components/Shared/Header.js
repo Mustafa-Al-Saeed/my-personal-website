@@ -9,7 +9,8 @@ const Header = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
   const dispatch = useDispatch();
   const { t } = useTranslation();
-
+  const fileUrl = "@/src/assets/attachments/CV.pdf"; // Replace with the actual file path or URL
+  const fileName = "CV.pdf";
   const lng = Cookies.get("i18next") || "en";
   const [listStatus, setListStatus] = useState(false);
 
@@ -18,9 +19,9 @@ const Header = () => {
   window.addEventListener("scroll", () => {
     console.log(myRef.current.style.top);
 
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (scrollTop > 300) {
-      myRef.current.style.top = "-86px";
+      myRef.current.style.top = "60px";
     } else {
       myRef.current.style.top = "0";
     }
@@ -52,7 +53,7 @@ const Header = () => {
         isLight
           ? "bg-white relative text-[#030712]"
           : "bg-[#030712] text-[#D1D5DB]"
-      } flex items-center justify-between h-[68px] p-3 lg:px-20  `}
+      } flex relative items-center justify-between h-[68px] p-3 lg:px-20  `}
     >
       <a className="text-xl font-bold hidden md:block  " href="#">
         &lt;/&gt;
@@ -130,7 +131,9 @@ const Header = () => {
             isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
           }  font-bold rounded-xl  px-4`}
         >
-          {t("Download CV")}
+          <a href={fileUrl} download={fileName}>
+            {t("Download CV")}
+          </a>
         </button>
       </div>
     </div>
@@ -138,15 +141,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// className={`  h-[68px] duration-[3000ms]  overflow-hidden  absolute px-3 left-0 ${
-//   listStatus ? "h-[240px] " : "h-[0px] md:h-[68px] "
-// } w-full md:relative md:top-0 md:flex md:items-center md:gap-5  md:text-center ${
-//   lng == "en"
-//     ? "border-r-[#1F2937] border-r-[1px]"
-//     : lng == "ar"
-//     ? "border-l-[#1F2937] border-l-[1px]"
-//     : ""
-// } ${
-//   isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
-// }  `}

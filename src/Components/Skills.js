@@ -14,6 +14,8 @@ import { SiAdobephotoshop } from "react-icons/si";
 import { SiAdobeillustrator } from "react-icons/si";
 import { SiStyledcomponents } from "react-icons/si";
 import { SiFormik } from "react-icons/si";
+import vuex from "../assets/Images/vuex-store.png";
+import pinia from "../assets/Images/pinia-logo-png_seeklogo-467284.png";
 
 import Cookies from "js-cookie";
 
@@ -43,7 +45,7 @@ const Skills = () => {
       <div
         className={` w-full flex ${
           lng == "en" ? "flex-row" : "flex-row-reverse"
-        } justify-center flex-wrap gap-10 sm:gap-14  md:gap-24       `}
+        } justify-center flex-wrap gap-x-10 sm:gap-x-14 md:gap-x-24 gap-y-4 md:gap-y-12  `}
       >
         <div className={` flex flex-col gap-2  justify-center items-center`}>
           <FaHtml5 className={` w-[64px] h-[64px] `} fill="#DD4B25" />
@@ -63,6 +65,16 @@ const Skills = () => {
         <div className={` flex flex-col gap-2  justify-center items-center`}>
           <SiVuedotjs className={` w-[64px] h-[64px] `} fill="#3fb27f" />
           <span>Vue</span>
+        </div>
+
+        <div className={` flex flex-col gap-2  justify-center items-center`}>
+          <img src={vuex} className=" w-[64px] h-[64px]" alt="" />
+          <span>Vuex</span>
+        </div>
+
+        <div className={` flex flex-col gap-2  justify-center items-center`}>
+          <img src={pinia} className=" w-[45px] h-[64px]" alt="" />
+          <span>Pinia</span>
         </div>
 
         <div className={` flex flex-col gap-2  justify-center items-center`}>

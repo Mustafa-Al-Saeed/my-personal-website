@@ -17,7 +17,7 @@ const About = () => {
         <h1
           className={`px-5 py-1 flex items-center justify-center mx-auto font-bold ${
             isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"
-          } bg-[#374151] w-[105px] h-[28px] rounded-xl text-sm mb-[12px] md:mb-[40px]  `}
+          } bg-[#374151] w-[115px] h-[28px] rounded-xl text-sm mb-[12px] md:mb-[40px]  `}
         >
           {t("About me")}
         </h1>
