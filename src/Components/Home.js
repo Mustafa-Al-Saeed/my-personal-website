@@ -11,6 +11,7 @@ const Home = () => {
 
   return (
     <div
+      id="home"
       className={`flex gap-12 flex-col md:flex-row pb-8 md:pt-[72px] pt-[44px] md:px-4 py-4 px-3 ${
         isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-white"
       } `}
@@ -52,7 +53,7 @@ const Home = () => {
           </ul>
         </div>
 
-        <PicShape />
+        <PicShape darkColor={"border-[#030712]"} direction={"right"} />
       </div>
     </div>
   );

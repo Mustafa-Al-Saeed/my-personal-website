@@ -39,8 +39,8 @@ const Header = () => {
 
   const links = [
     { name: "Home", path: "#home" },
-    { name: "Services", path: "#services" },
     { name: "About me", path: "#about" },
+    { name: "Skills", path: "#skills" },
     { name: "Portfolio", path: "#portfolio" },
     { name: "Contact me", path: "#contact" },
   ];
