@@ -4,6 +4,7 @@
   "About me": "About me",
   "Portfolio": "Portfolio",
   "Contact me": "Contact me",
+  "Skills": "Skills",
   "Download CV": "Download CV",
   "Welcome": "Hi, I’m Mostafa Elsaid 👋",
   "description": "I am Mostafa El-Said, a front-end developer specializing in building interactive and modern websites using advanced technologies like Vue.js and React. With practical experience in various projects, I possess a strong ability to solve problems and develop creative solutions to enhance user experience. I am always eager to improve my skills and stay updated with the latest technology trends.",
@@ -11,5 +12,6 @@
   "title for me": "Mostafa El-Said - Dedicated Front-End Developer Crafting User-Centric Web Solutions",
   "desc for me part-1": "I am Mostafa El-Said, a front-end developer with a strong foundation in creating intuitive and user-friendly web applications. My expertise lies in leveraging modern technologies like Vue.js and React to develop responsive and engaging websites. Over the years, I have worked on a variety of projects, from personal portfolios to complex platforms, each designed to meet specific user needs and business goals.",
   "desc for me part-2": "I take pride in my ability to adapt to new challenges and continuously improve my skill set. Whether working on a solo project or as part of a team, I focus on delivering solutions that are not only functional but also aesthetically pleasing. My approach is rooted in collaboration, listening to client needs, and translating those into practical, elegant web experiences.",
-  "desc for me part-3": " I'm always eager to connect with companies and professionals who value innovation and user-centric design in their digital strategies."
+  "desc for me part-3": " I'm always eager to connect with companies and professionals who value innovation and user-centric design in their digital strategies.",
+  "desc of skills": "The skills, tools and technologies I am really good at:"
 }

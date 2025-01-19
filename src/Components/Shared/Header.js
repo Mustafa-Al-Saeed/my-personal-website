@@ -38,11 +38,11 @@ const Header = () => {
   };
 
   const links = [
-    { name: "Home", path: "#home" },
-    { name: "About me", path: "#about" },
+    { name: "About", path: "#about" },
+    { name: "Work", path: "#work" },
     { name: "Skills", path: "#skills" },
-    { name: "Portfolio", path: "#portfolio" },
-    { name: "Contact me", path: "#contact" },
+    // { name: "Testimonials", path: "#testimonials" },
+    { name: "Contact", path: "#contact" },
   ];
 
   return (

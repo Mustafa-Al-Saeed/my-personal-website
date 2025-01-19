@@ -12,8 +12,8 @@ const Home = () => {
   return (
     <div
       id="home"
-      className={`flex gap-12 flex-col md:flex-row pb-8 md:pt-[72px] pt-[44px] md:px-4 py-4 px-3 ${
-        isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-white"
+      className={`flex gap-12 flex-col md:flex-row pb-8 md:pt-[72px] pt-[44px] md:px-4 py-4 px-4 ${
+        isLight ? "bg-white text-[#4B5563]" : "bg-[#030712] text-[#D1D5DB]"
       } `}
     >
       <div
@@ -21,11 +21,15 @@ const Home = () => {
       >
         <div className=" flex flex-col gap-10 w-full md:w-[calc(67%-48px)] order-2 md:order-1 ">
           <div className=" flex flex-col gap-2">
-            <h1 className={` text-3xl font-bold`}>{t("Welcome")}</h1>
+            <h1
+              className={` text-3xl font-bold ${
+                isLight ? "text-[#111827]" : "text-[#F9FAFB]"
+              }`}
+            >
+              {t("Welcome")}
+            </h1>
 
-            <p className={`${!isLight ? "text-[#D1D5DB]" : ""}`}>
-              {t("description")}
-            </p>
+            <p className={``}>{t("description")}</p>
           </div>
           <div className={`flex items-center gap-2`}>
             <i className="pi pi-map-marker" style={{ fontSize: "1.25rem" }}></i>
