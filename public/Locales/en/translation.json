@@ -1,9 +1,9 @@
 {
   "Home": "Home",
   "Services": "Services",
-  "About me": "About me",
+  "About": "About",
   "Portfolio": "Portfolio",
-  "Contact me": "Contact me",
+  "Contact": "Contact",
   "Skills": "Skills",
   "Download CV": "Download CV",
   "Welcome": "Hi, I’m Mostafa Elsaid 👋",
@@ -13,5 +13,15 @@
   "desc for me part-1": "I am Mostafa El-Said, a front-end developer with a strong foundation in creating intuitive and user-friendly web applications. My expertise lies in leveraging modern technologies like Vue.js and React to develop responsive and engaging websites. Over the years, I have worked on a variety of projects, from personal portfolios to complex platforms, each designed to meet specific user needs and business goals.",
   "desc for me part-2": "I take pride in my ability to adapt to new challenges and continuously improve my skill set. Whether working on a solo project or as part of a team, I focus on delivering solutions that are not only functional but also aesthetically pleasing. My approach is rooted in collaboration, listening to client needs, and translating those into practical, elegant web experiences.",
   "desc for me part-3": " I'm always eager to connect with companies and professionals who value innovation and user-centric design in their digital strategies.",
-  "desc of skills": "The skills, tools and technologies I am really good at:"
+  "desc of skills": "The skills, tools and technologies I am really good at:",
+  "Experience": "Experience",
+  "ExpDescription": "Here is a quick summary of my most recent experiences:",
+  "flojicsFirstPoint": "I worked at Flojics Technologies, a software company specializing in delivering innovative digital solutions.",
+  "flojicsSecondPoint": "The work environment at Flojics Technologies was both pleasant and beneficial, fostering a supportive and growth-oriented atmosphere.",
+  "flojicsThirdPoint": "As a Frontend Developer, I was responsible for converting UI designs into functional websites, ensuring an intuitive and responsive user experience.",
+  "flojicsFourthPoint": "One of the notable challenges was integrating a chat feature into a website for the first time using Firebase. This experience significantly enhanced my technical skills and understanding of real-time communication in web applications.",
+  "flojicsFifthPoint": "I successfully implemented complex UI designs, improving the overall user engagement and performance of the web applications I worked on.",
+  "flojicsSixthPoint": "During my time at Flojics Technologies, I honed my skills in frontend development, particularly in using modern frameworks and real-time database integration, such as Firebase.",
+  "Get in touch": "Get in touch",
+  "contact desc": "What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect."
 }

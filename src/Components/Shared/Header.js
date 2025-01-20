@@ -40,9 +40,8 @@ const Header = () => {
 
   const links = [
     { name: "About", path: "#about" },
-    { name: "Work", path: "#work" },
     { name: "Skills", path: "#skills" },
-    // { name: "Testimonials", path: "#testimonials" },
+    { name: "Experience", path: "#experience" },
     { name: "Contact", path: "#contact" },
   ];
 
@@ -77,7 +76,7 @@ const Header = () => {
 
       <div className=" flex items-center overflow-hidden ">
         <ul
-          className={` overflow-hidden ${
+          className={` z-50 overflow-hidden ${
             listStatus ? "h-[305px]" : "h-0 md:h-[68px]"
           } transition-all absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 ${
             isLight
