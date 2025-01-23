@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className={` md:px-20 md:py-24 px-4 py-16 flex flex-col gap-12 ${
+      className={` container mx-auto md:px-20 md:py-24 px-4 py-16 flex flex-col gap-12 ${
         isLight ? "bg-white text-[#4B5563]" : "bg-[#030712] text-[#D1D5DB]"
       }`}
     >
@@ -79,7 +79,11 @@ const Contact = () => {
             <div
               className={`${isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"} ${
                 showTextCopy ? "opacity-100" : "opacity-0"
-              } transition-all text-[16px] px-2 py-1 md:px-3 md:py-2 rounded-2xl z-10 text-nowrap text-center absolute right-[30px] md:right-[45px] top-[-6px] `}
+              } transition-all text-[16px] px-2 py-1 md:px-3 md:py-2 rounded-2xl z-10 text-nowrap text-center absolute ${
+                lng == "en"
+                  ? "right-[30px] md:right-[45px]"
+                  : "left-[30px] md:left-[45px]"
+              } top-[-6px] `}
             >
               text copied
             </div>
@@ -101,7 +105,11 @@ const Contact = () => {
             <div
               className={`${isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"} ${
                 showPhoneCopy ? "opacity-100" : "opacity-0"
-              } transition-all text-[16px] px-2 py-1 md:px-3 md:py-2 rounded-2xl z-10 text-nowrap text-center absolute right-[30px] md:right-[45px] top-[-6px] `}
+              } transition-all text-[16px] px-2 py-1 md:px-3 md:py-2 rounded-2xl z-10 text-nowrap text-center absolute ${
+                lng == "en"
+                  ? "right-[30px] md:right-[45px]"
+                  : "left-[30px] md:left-[45px]"
+              } top-[-6px] `}
             >
               text copied
             </div>

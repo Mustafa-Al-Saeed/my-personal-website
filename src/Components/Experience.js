@@ -10,8 +10,8 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className={` px-4 py-16 md:px-20 md:py-24 flex flex-col gap-12 ${
-        isLight ? "bg-white text-[#4B5563]" : "bg-[#111827] text-[#D1D5DB]"
+      className={` container mx-auto px-4 py-16 md:px-20 md:py-24 flex flex-col gap-12 ${
+        isLight ? "bg-[#f5f5f5] text-[#4B5563]" : "bg-[#111827] text-[#D1D5DB]"
       } `}
     >
       <div className={` flex flex-col gap-4 justify-center items-center`}>
@@ -26,7 +26,7 @@ const Experience = () => {
       </div>
 
       <div
-        className={`p-3 md:p-8 flex flex-col md:flex-row gap-4 rounded-xl drop-shadow-lg ${
+        className={`p-3 md:p-8 flex flex-col lg:flex-row gap-4 rounded-xl drop-shadow-lg ${
           isLight ? "bg-white" : "bg-[#1F2937]"
         }`}
       >
@@ -34,7 +34,7 @@ const Experience = () => {
           Flojics
         </div>
 
-        <div className={`w-full md:w-2/4 flex flex-col gap-4`}>
+        <div className={`w-full lg:w-2/4 flex flex-col gap-4`}>
           <div className=" text-xl font-bold">Frontend Developer</div>
 
           <ul className=" list-disc list-inside pl-6 ">
@@ -47,7 +47,7 @@ const Experience = () => {
           </ul>
         </div>
 
-        <div className={` w-full md:w-1/4 text-end`}>Jan 2024 - Dec 2024</div>
+        <div className={` w-full lg:w-1/4 text-end`}>Jan 2024 - Dec 2024</div>
       </div>
     </div>
   );

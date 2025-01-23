@@ -18,7 +18,6 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
 
   const handleScroll = () => {
-    console.log(window.scrollY);
     if (window.scrollY > 200) {
       setShowHeader(true);
     } else {
@@ -55,92 +54,90 @@ const Header = () => {
   return (
     <div
       ref={myRef}
-      className={` z-40 w-full  ${
+      className={`z-40 w-full ${
         isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
-      } flex  items-center justify-between h-[68px] p-3 lg:px-20 ${
-        showHeader ? "fixed top-0 left-0" : ""
-      } `}
+      } flex items-center justify-center h-[68px] p-3 ${
+        showHeader ? "fixed top-0 left-0 shadow-lg" : ""
+      }`}
     >
-      <a className="text-xl font-bold hidden md:block  " href="#">
-        &lt;/&gt;
-      </a>
-
-      <div className=" cursor-pointer md:hidden">
-        {listStatus ? (
-          <i
-            onClick={changeListStatus}
-            className="pi pi-times hover:text-[#38BDF8]"
-            style={{ fontSize: "1.5rem" }}
-          ></i>
-        ) : (
-          <i
-            onClick={changeListStatus}
-            className="pi pi-align-justify hover:text-[#38BDF8]"
-            style={{ fontSize: "1.5rem" }}
-          ></i>
-        )}
-      </div>
-
-      <div className=" flex items-center overflow-hidden ">
-        <ul
-          className={` z-50 overflow-hidden ${
-            listStatus ? "h-[257px]" : "h-0 md:h-[68px]"
-          } transition-all absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 ${
-            isLight
-              ? "bg-white md:bg-transparent"
-              : "bg-[#030712] md:bg-transparent"
-          } w-full md:w-fit`}
-        >
-          {links.map((link, index) => (
-            <li
-              key={index}
-              className=" flex items-center p-3 md:p-0 hover:text-[#38BDF8]"
-            >
-              <a className=" cursor-pointer " href={link.path}>
-                {t(link.name)}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        <div className=" px-3 flex items-center gap-3">
-          <div className="cursor-pointer " onClick={toggleLanguage}>
+      <div className="container flex items-center justify-between md:justify-center">
+        <div className="cursor-pointer md:hidden">
+          {listStatus ? (
             <i
-              className="pi pi-language hover:text-[#38BDF8] transition-colors"
+              onClick={changeListStatus}
+              className="pi pi-times hover:text-[#38BDF8]"
               style={{ fontSize: "1.5rem" }}
             ></i>
-          </div>
-
-          <div
-            className={`cursor-pointer ${isLight ? "hidden" : "block"}`}
-            onClick={() => dispatch(toLightMode())}
-          >
+          ) : (
             <i
-              className="pi pi-sun hover:text-[#38BDF8] transition-colors"
+              onClick={changeListStatus}
+              className="pi pi-align-justify hover:text-[#38BDF8]"
               style={{ fontSize: "1.5rem" }}
             ></i>
-          </div>
-
-          <div
-            className={`cursor-pointer ${isLight ? "block" : "hidden"}`}
-            onClick={() => dispatch(toDarkMode())}
-          >
-            <i
-              className="pi pi-moon hover:text-[#38BDF8] transition-colors "
-              style={{ fontSize: "1.5rem" }}
-            ></i>
-          </div>
+          )}
         </div>
 
-        <button
-          className={`hover:text-[#38BDF8] whitespace-nowrap	 transition-colors py-[6px] ${
-            isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
-          }  font-bold rounded-xl  px-4`}
-        >
-          <a href={fileUrl} download={fileName}>
-            {t("Download CV")}
-          </a>
-        </button>
+        <div className={` flex gap-3 `}>
+          <ul
+            className={`z-50 overflow-hidden ${
+              listStatus ? "h-[257px]" : "h-0 md:h-[68px]"
+            } transition-all absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 ${
+              isLight
+                ? "bg-white md:bg-transparent"
+                : "bg-[#030712] md:bg-transparent"
+            } w-full md:w-fit`}
+          >
+            {links.map((link, index) => (
+              <li
+                key={index}
+                className="flex items-center p-3 md:p-0 hover:text-[#38BDF8]"
+              >
+                <a className="cursor-pointer" href={link.path}>
+                  {t(link.name)}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex items-center gap-3">
+            <div className="cursor-pointer" onClick={toggleLanguage}>
+              <i
+                className="pi pi-language hover:text-[#38BDF8] transition-colors"
+                style={{ fontSize: "1.5rem" }}
+              ></i>
+            </div>
+
+            <div
+              className={`cursor-pointer ${isLight ? "hidden" : "block"}`}
+              onClick={() => dispatch(toLightMode())}
+            >
+              <i
+                className="pi pi-sun hover:text-[#38BDF8] transition-colors"
+                style={{ fontSize: "1.5rem" }}
+              ></i>
+            </div>
+
+            <div
+              className={`cursor-pointer ${isLight ? "block" : "hidden"}`}
+              onClick={() => dispatch(toDarkMode())}
+            >
+              <i
+                className="pi pi-moon hover:text-[#38BDF8] transition-colors"
+                style={{ fontSize: "1.5rem" }}
+              ></i>
+            </div>
+
+            <button
+              className={`hover:text-[#38BDF8] whitespace-nowrap transition-colors py-[6px] ${
+                isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
+              } font-bold rounded-xl px-4`}
+            >
+              <a href={fileUrl} download={fileName}>
+                {t("Download CV")}
+              </a>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

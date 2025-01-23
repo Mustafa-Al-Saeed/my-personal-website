@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import PicShape from "./Shared/PicShape";
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import animationAbout from "../assets/Animations/Animation - 1737645508502.json";
 
 const About = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
@@ -9,8 +11,8 @@ const About = () => {
   return (
     <div
       id="about"
-      className={` px-4 md:px-[80px] py-8 md:py-[96px] ${
-        isLight ? "bg-white text-[#4B5563]" : "bg-[#111827] text-[#D1D5DB]"
+      className={` container mx-auto px-4 md:px-[80px] py-8 md:py-[96px] ${
+        isLight ? "bg-[#f5f5f5] text-[#4B5563]" : "bg-[#111827] text-[#D1D5DB]"
       }  `}
     >
       <div className={` pt-8 md:pt-[0px] flex flex-col gap-12  `}>
@@ -19,16 +21,16 @@ const About = () => {
             isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"
           } bg-[#374151] w-[115px] h-[28px] rounded-xl text-sm mb-[12px] md:mb-[40px]  `}
         >
-          {t("About me")}
+          {t("About")}
         </h1>
 
         <div
-          className={`flex flex-wrap md:flex-nowrap flex-col md:flex-row gap-12`}
+          className={`flex flex-wrap md:flex-nowrap flex-col lg:flex-row gap-12`}
         >
-          <PicShape darkColor={"border-[#111827]"} />
+          <Lottie loop={true} animationData={animationAbout} />
 
           <div
-            className={`order-1 md:order-2 w-full md:w-[calc(50%-48px)] flex flex-col gap-6 `}
+            className={`order-1 md:order-2 w-full lg:w-[calc(70%-48px)] flex flex-col gap-6 my-auto `}
           >
             <h1
               className={` text-3xl font-bold ${

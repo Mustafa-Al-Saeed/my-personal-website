@@ -6,6 +6,7 @@ import { useTranslation, initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import HttpApi from "i18next-http-backend";
 import Cookies from "js-cookie";
+import { useDispatch, useSelector } from "react-redux";
 
 i18n
   .use(initReactI18next)
@@ -32,6 +33,13 @@ i18n
 
 function App() {
   const { t } = useTranslation();
+  const isLight = useSelector((state) => state.colorMode.isLight);
+
+  if (isLight) {
+    document.body.style.backgroundColor = "white";
+  } else {
+    document.body.style.backgroundColor = "#030712";
+  }
 
   const lng = Cookies.get("i18next") || "en";
 

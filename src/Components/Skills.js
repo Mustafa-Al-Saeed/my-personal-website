@@ -27,7 +27,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className={` px-4 md:px-[80px] py-16 md:py-[96px] flex flex-col gap-6 md:gap-12  ${
+      className={` container mx-auto px-4 md:px-[80px] py-16 md:py-[96px] flex flex-col gap-6 md:gap-12  ${
         isLight ? "bg-white text-[#4B5563]" : "bg-[#030712] text-[#D1D5DB]"
       } `}
     >

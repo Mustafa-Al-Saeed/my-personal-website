@@ -3,6 +3,8 @@ import { useTranslation } from "react-i18next";
 import myPic from "../assets/Images/pic.jpg";
 import Cookies from "js-cookie";
 import PicShape from "./Shared/PicShape";
+import Lottie from "lottie-react";
+import dev from "../assets/Animations/dev.json";
 
 const Home = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
@@ -12,14 +14,14 @@ const Home = () => {
   return (
     <div
       id="home"
-      className={`flex gap-12 flex-col md:flex-row pb-8 md:pt-[72px] pt-[44px] md:px-4 py-4 px-4 ${
+      className={` container mx-auto flex gap-12 flex-col lg:flex-row pb-8 md:pt-[72px] pt-[44px] md:px-4 py-4 px-4 ${
         isLight ? "bg-white text-[#4B5563]" : "bg-[#030712] text-[#D1D5DB]"
       } `}
     >
       <div
-        className={`  container mx-auto flex flex-wrap md:flex-nowrap gap-12 `}
+        className={`  container mx-auto flex flex-col-reverse  lg:flex-row gap-12 `}
       >
-        <div className=" flex flex-col gap-10 w-full md:w-[calc(67%-48px)] order-2 md:order-1 ">
+        <div className=" flex flex-col gap-10 w-full lg:w-[calc(70%-48px)]  ">
           <div className=" flex flex-col gap-2">
             <h1
               className={` text-3xl font-bold ${
@@ -57,7 +59,7 @@ const Home = () => {
           </ul>
         </div>
 
-        <PicShape darkColor={"border-[#030712]"} direction={"right"} />
+        <Lottie loop={true} animationData={dev} />
       </div>
     </div>
   );

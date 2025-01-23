@@ -4,6 +4,11 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Cairo", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 
 ul {
