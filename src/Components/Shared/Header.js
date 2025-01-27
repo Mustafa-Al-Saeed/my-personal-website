@@ -132,7 +132,10 @@ const Header = () => {
                 isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
               } font-bold rounded-xl px-4`}
             >
-              <a href={fileUrl} download={fileName}>
+              <a
+                href="../../../public/assets/attachments/CV.pdf"
+                download={fileName}
+              >
                 {t("Download CV")}
               </a>
             </button>
