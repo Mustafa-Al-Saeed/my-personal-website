@@ -4,14 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import Cookies from "js-cookie";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
-import cv from "../../assets/attachments/CV.pdf";
+import cv from "../../assets/attachments/CV.pdf"; // استيراد الملف مباشرةً
 
 const Header = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const fileUrl = "@/src/assets/attachments/CV.pdf"; // Replace with the actual file path or URL
-  const fileName = cv.split("/").pop();
+  const fileName = "CV.pdf"; // اسم الملف الذي سيتم تحميله
   const lng = Cookies.get("i18next") || "en";
   const [listStatus, setListStatus] = useState(false);
 
@@ -133,10 +132,7 @@ const Header = () => {
                 isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
               } font-bold rounded-xl px-4`}
             >
-              <a
-                href="../../../public/assets/attachments/CV.pdf"
-                download={fileName}
-              >
+              <a href={cv} download={fileName}>
                 {t("Download CV")}
               </a>
             </button>
