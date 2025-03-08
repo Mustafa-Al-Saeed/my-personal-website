@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import Cookies from "js-cookie";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
+import cv from "../../assets/attachments/CV.pdf";
 
 const Header = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const fileUrl = "@/src/assets/attachments/CV.pdf"; // Replace with the actual file path or URL
-  const fileName = "CV.pdf";
+  const fileName = cv;
   const lng = Cookies.get("i18next") || "en";
   const [listStatus, setListStatus] = useState(false);
 
