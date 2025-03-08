@@ -85,7 +85,7 @@ const Contact = () => {
                   : "left-[30px] md:left-[45px]"
               } top-[-6px] `}
             >
-              text copied
+              {t("text copied")}
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                   : "left-[30px] md:left-[45px]"
               } top-[-6px] `}
             >
-              text copied
+              {t("text copied")}
             </div>
           </div>
         </div>
