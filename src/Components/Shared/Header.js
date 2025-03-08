@@ -11,7 +11,7 @@ const Header = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const fileUrl = "@/src/assets/attachments/CV.pdf"; // Replace with the actual file path or URL
-  const fileName = cv;
+  const fileName = cv.split("/").pop();
   const lng = Cookies.get("i18next") || "en";
   const [listStatus, setListStatus] = useState(false);
 
@@ -56,7 +56,7 @@ const Header = () => {
     <div
       ref={myRef}
       className={`z-40 w-full ${
-        isLight ? "bg-white text-[#030712]" : "bg-[red] text-[#D1D5DB]"
+        isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
       } flex items-center justify-center h-[68px] p-3 ${
         showHeader ? "fixed top-0 left-0 shadow-lg" : ""
       }`}
@@ -133,7 +133,10 @@ const Header = () => {
                 isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
               } font-bold rounded-xl px-4`}
             >
-              <a href="../../../public/assets/attachments/CV.pdf" download={cv}>
+              <a
+                href="../../../public/assets/attachments/CV.pdf"
+                download={fileName}
+              >
                 {t("Download CV")}
               </a>
             </button>
