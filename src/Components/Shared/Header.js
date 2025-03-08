@@ -56,7 +56,7 @@ const Header = () => {
     <div
       ref={myRef}
       className={`z-40 w-full ${
-        isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
+        isLight ? "bg-white text-[#030712]" : "bg-[red] text-[#D1D5DB]"
       } flex items-center justify-center h-[68px] p-3 ${
         showHeader ? "fixed top-0 left-0 shadow-lg" : ""
       }`}
@@ -133,10 +133,7 @@ const Header = () => {
                 isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
               } font-bold rounded-xl px-4`}
             >
-              <a
-                href="../../../public/assets/attachments/CV.pdf"
-                download={fileName}
-              >
+              <a href="../../../public/assets/attachments/CV.pdf" download={cv}>
                 {t("Download CV")}
               </a>
             </button>
