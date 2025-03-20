@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import Cookies from "js-cookie";
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
-import cv from "../../assets/attachments/CV.pdf"; // استيراد الملف مباشرةً
+import cv from "../../assets/attachments/CV.pdf";
 
 const Header = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const fileName = "CV.pdf"; // اسم الملف الذي سيتم تحميله
+  const fileName = "CV.pdf";
   const lng = Cookies.get("i18next") || "en";
   const [listStatus, setListStatus] = useState(false);
 

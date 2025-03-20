@@ -7,6 +7,32 @@ const Experience = () => {
   const { t } = useTranslation();
   const lng = Cookies.get("i18next") || "en";
 
+  const experiences = [
+    {
+      company: "Flojics Technologies",
+      position: "Frontend Web Developer",
+      points: [
+        t("flojicsFirstPoint"),
+        t("flojicsSecondPoint"),
+        t("flojicsThirdPoint"),
+        t("flojicsFourthPoint"),
+        t("flojicsFifthPoint"),
+        t("flojicsSixthPoint"),
+      ],
+      date: "Jan 2024 - Jan 2024",
+    },
+    {
+      company: "Freelance Front-end Web Developer",
+      position: "Frontend Web Developer",
+      points: [
+        t("freelanceFirstPoint"),
+        t("freelanceSecondPoint"),
+        t("freelanceThirdPoint"),
+      ],
+      date: "Feb 2022 - Oct 2023",
+    },
+  ];
+
   return (
     <div
       id="experience"
@@ -25,30 +51,31 @@ const Experience = () => {
         <span className=" text-center">{t("ExpDescription")}</span>
       </div>
 
-      <div
-        className={`p-3 md:p-8 flex flex-col lg:flex-row gap-4 rounded-xl drop-shadow-lg ${
-          isLight ? "bg-white" : "bg-[#1F2937]"
-        }`}
-      >
-        <div className={` w-full md:w-1/4 text-[#14A800] text-2xl font-bold `}>
-          Flojics
+      {experiences.map((experience, index) => (
+        <div
+          className={`p-3 md:p-8 flex flex-col lg:flex-row gap-4 rounded-xl drop-shadow-lg ${
+            isLight ? "bg-white" : "bg-[#1F2937]"
+          }`}
+        >
+          <div
+            className={` w-full lg:w-1/4 text-[#14A800] text-2xl font-bold `}
+          >
+            {experience.company}
+          </div>
+
+          <div className={`w-full lg:w-2/4 flex flex-col gap-4`}>
+            <div className=" text-xl font-bold">{experience.position}</div>
+
+            <ul className=" list-disc list-inside pl-6 ">
+              {experience.points.map((point, pointIndex) => (
+                <li key={pointIndex}>{point}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className={` w-full lg:w-1/4 text-end`}>{experience.date}</div>
         </div>
-
-        <div className={`w-full lg:w-2/4 flex flex-col gap-4`}>
-          <div className=" text-xl font-bold">Frontend Developer</div>
-
-          <ul className=" list-disc list-inside pl-6 ">
-            <li>{t("flojicsFirstPoint")}</li>
-            <li>{t("flojicsSecondPoint")}</li>
-            <li>{t("flojicsThirdPoint")}</li>
-            <li>{t("flojicsForthPoint")}</li>
-            <li>{t("flojicsFifthPoint")}</li>
-            <li>{t("flojicsSixthPoint")}</li>
-          </ul>
-        </div>
-
-        <div className={` w-full lg:w-1/4 text-end`}>Jan 2024 - Dec 2024</div>
-      </div>
+      ))}
     </div>
   );
 };
