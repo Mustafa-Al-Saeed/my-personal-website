@@ -57,7 +57,11 @@ const Header = () => {
       className={`z-40 w-full ${
         isLight ? "bg-white text-[#030712]" : "bg-[#030712] text-[#D1D5DB]"
       } flex items-center justify-center h-[68px] p-3 ${
-        showHeader ? "fixed top-0 left-0 shadow-lg" : ""
+        showHeader
+          ? `fixed top-0 left-0 shadow-lg ${
+              isLight ? "shadow-gray-800/10" : "shadow-white/10"
+            }`
+          : ""
       }`}
     >
       <div className="container flex items-center justify-between md:justify-center">
