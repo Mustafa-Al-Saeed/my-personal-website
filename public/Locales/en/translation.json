@@ -7,9 +7,12 @@
   "Skills": "Skills",
   "Download CV": "Download CV",
   "Welcome": "Hi, I’m Mostafa Saeed 👋",
-  "description": "I am Mostafa Saeed, a front-end developer specializing in building interactive and modern websites using advanced technologies like Vue.js and React. With practical experience in various projects, I possess a strong ability to solve problems and develop creative solutions to enhance user experience. I am always eager to improve my skills and stay updated with the latest technology trends.",
+  "old-description": "I am Mostafa Saeed, a front-end developer specializing in building interactive and modern websites using advanced technologies like Vue.js and React. With practical experience in various projects, I possess a strong ability to solve problems and develop creative solutions to enhance user experience. I am always eager to improve my skills and stay updated with the latest technology trends.",
+  "description": "I transform ideas into pixel-perfect interfaces using Figma & Adobe XD, then bring them to life professionally with React & Vue.js. My dual expertise in design and development ensures smooth, user-centered digital experiences. Always designing - always coding.",
   "location": "Alexandria, Egypt",
-  "title for me": "Mostafa Saeed - Dedicated Front-End Developer Crafting User-Centric Web Solutions",
+  "old title for me": "Mostafa Saeed - Dedicated Front-End Developer Crafting User-Centric Web Solutions",
+  "main title": "UI/UX Designer & Front-End Developer",
+  "title for me": "Designing intuitive interfaces, building with clean code.",
   "desc for me part-1": "I am Mostafa Saeed, a front-end developer with a strong foundation in creating intuitive and user-friendly web applications. My expertise lies in leveraging modern technologies like Vue.js and React to develop responsive and engaging websites. Over the years, I have worked on a variety of projects, from personal portfolios to complex platforms, each designed to meet specific user needs and business goals.",
   "desc for me part-2": "I take pride in my ability to adapt to new challenges and continuously improve my skill set. Whether working on a solo project or as part of a team, I focus on delivering solutions that are not only functional but also aesthetically pleasing. My approach is rooted in collaboration, listening to client needs, and translating those into practical, elegant web experiences.",
   "desc for me part-3": " I'm always eager to connect with companies and professionals who value innovation and user-centric design in their digital strategies.",
@@ -35,5 +38,21 @@
   "thirdEXPDate": "Before 2022",
   "Contact me": "Contact me",
   "contact desc": "I welcome you to contact me to discuss collaboration opportunities, answer your questions, or even exchange creative ideas.",
-  "text copied": "text copied"
+  "text copied": "text copied",
+  "about": {
+    "intro": "I craft user-centric digital solutions, from designing in Figma and Adobe XD to implementing with React.js and Vue.js. My dual expertise combines:",
+    "expertise": {
+      "ui_ux": "UI/UX Mastery: Transforming ideas into interactive prototypes with a focus on usability.",
+      "technical": "Technical Development: Building fast, scalable web apps using cutting-edge tools.",
+      "solutions": "End-to-End Solutions: From user research to final product deployment."
+    },
+    "why_me": {
+      "title": "Why Work With Me?",
+      "points": [
+        "I leverage technical skills to ensure pixel-perfect design implementation.",
+        "Obsessed with details that matter: micro-interactions to performance optimization.",
+        "Continuously learning to deliver modern, innovative solutions."
+      ]
+    }
+  }
 }

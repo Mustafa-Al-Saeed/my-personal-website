@@ -36,19 +36,37 @@ const About = () => {
           <div
             className={`order-1 md:order-2 w-full lg:w-[calc(70%-48px)] flex flex-col gap-6 my-auto `}
           >
-            <h1
-              className={` text-3xl font-bold ${
-                isLight ? "text-[#111827]" : "text-[#F9FAFB]"
-              }`}
-            >
-              {t("title for me")}
-            </h1>
+            <div>
+              <h1 className={` text-2xl md:text-3xl font-bold text-[#14a800] `}>
+                {t("main title")} <br />
+              </h1>
+              <h2
+                className={`text-xl md:text-2xl ${
+                  isLight ? "text-[#111827]" : "text-[#F9FAFB]"
+                }`}
+              >
+                {t("title for me")}
+              </h2>
+            </div>
 
-            <p className={` flex flex-col gap-4`}>
-              <span>{t("desc for me part-1")}</span>
-              <span> {t("desc for me part-2")}</span>
-              <span> {t("desc for me part-3")}</span>
-            </p>
+            <div className={`flex flex-col gap-4`}>
+              <p>{t("about.intro")}</p>
+
+              <ul className="list-disc list-inside">
+                <li>{t("about.expertise.ui_ux")}</li>
+                <li>{t("about.expertise.technical")}</li>
+                <li>{t("about.expertise.solutions")}</li>
+              </ul>
+
+              <h2>{t("about.why_me.title")}</h2>
+              <ul className="list-disc list-inside">
+                {t("about.why_me.points", { returnObjects: true }).map(
+                  (point, index) => (
+                    <li key={index}>{point}</li>
+                  )
+                )}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -57,3 +75,9 @@ const About = () => {
 };
 
 export default About;
+
+// <p className={` flex flex-col gap-4`}>
+// <span>{t("desc for me part-1")}</span>
+// <span> {t("desc for me part-2")}</span>
+// <span> {t("desc for me part-3")}</span>
+// </p>
