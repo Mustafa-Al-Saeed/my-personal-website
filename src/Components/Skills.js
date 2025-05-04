@@ -20,7 +20,6 @@ import vuex from "../assets/Images/vuex-store.png";
 import pinia from "../assets/Images/pinia-logo-png_seeklogo-467284.png";
 import photoShop from "../assets/Images/Photoshop.png";
 import Figma from "../assets/Images/Figma.png";
-import adobeXD from "../assets/Images/AdobeXD.png";
 
 import Cookies from "js-cookie";
 
@@ -45,12 +44,6 @@ const Skills = () => {
     {
       name: "Figma",
       tag: Figma,
-      color: "",
-      status: false,
-    },
-    {
-      name: "Adobe XD",
-      tag: adobeXD,
       color: "",
       status: false,
     },

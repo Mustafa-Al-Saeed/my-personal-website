@@ -8,7 +8,7 @@
   "Download CV": "Download CV",
   "Welcome": "Hi, I’m Mostafa Saeed 👋",
   "old-description": "I am Mostafa Saeed, a front-end developer specializing in building interactive and modern websites using advanced technologies like Vue.js and React. With practical experience in various projects, I possess a strong ability to solve problems and develop creative solutions to enhance user experience. I am always eager to improve my skills and stay updated with the latest technology trends.",
-  "description": "I transform ideas into pixel-perfect interfaces using Figma & Adobe XD, then bring them to life professionally with React & Vue.js. My dual expertise in design and development ensures smooth, user-centered digital experiences. Always designing - always coding.",
+  "description": "I transform ideas into pixel-perfect interfaces using Figma, then bring them to life professionally with React & Vue.js. My dual expertise in design and development ensures smooth, user-centered digital experiences. Always designing - always coding.",
   "location": "Alexandria, Egypt",
   "old title for me": "Mostafa Saeed - Dedicated Front-End Developer Crafting User-Centric Web Solutions",
   "main title": "UI/UX Designer & Front-End Developer",
@@ -40,7 +40,7 @@
   "contact desc": "I welcome you to contact me to discuss collaboration opportunities, answer your questions, or even exchange creative ideas.",
   "text copied": "text copied",
   "about": {
-    "intro": "I craft user-centric digital solutions, from designing in Figma and Adobe XD to implementing with React.js and Vue.js. My dual expertise combines:",
+    "intro": "I craft user-centric digital solutions, from designing in Figma to implementing with React.js and Vue.js. My dual expertise combines:",
     "expertise": {
       "ui_ux": "UI/UX Mastery: Transforming ideas into interactive prototypes with a focus on usability.",
       "technical": "Technical Development: Building fast, scalable web apps using cutting-edge tools.",
