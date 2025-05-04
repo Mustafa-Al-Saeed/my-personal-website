@@ -55,7 +55,7 @@ const Contact = () => {
             isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"
           } bg-[#374151]   rounded-xl    `}
         >
-          {t("Get in touch")}
+          {t("Contact me")}
         </h1>
 
         <span className=" text-center pb-8 md:pb-0 w-full text-[18px] max-w-[576px]">
