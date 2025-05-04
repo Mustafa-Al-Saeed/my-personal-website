@@ -17,9 +17,9 @@ const About = () => {
     >
       <div className={` pt-8 md:pt-[0px] flex flex-col gap-12  `}>
         <h1
-          className={`px-5 py-1 flex items-center justify-center mx-auto font-bold ${
+          className={` flex items-center justify-center mx-auto font-bold text-[26px] md:text-[32px]  py-[10px]  px-[45px]  ${
             isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"
-          } bg-[#374151] w-[115px] h-[28px] rounded-xl text-sm mb-[12px] md:mb-[40px]  `}
+          } bg-[#374151]   rounded-xl    `}
         >
           {t("About")}
         </h1>
@@ -27,7 +27,11 @@ const About = () => {
         <div
           className={`flex flex-wrap md:flex-nowrap flex-col lg:flex-row gap-12`}
         >
-          <Lottie loop={true} animationData={animationAbout} />
+          <Lottie
+            loop={true}
+            animationData={animationAbout}
+            className="mb-[40px]   md:mb-0"
+          />
 
           <div
             className={`order-1 md:order-2 w-full lg:w-[calc(70%-48px)] flex flex-col gap-6 my-auto `}

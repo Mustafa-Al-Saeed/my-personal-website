@@ -9,7 +9,7 @@ const CopyRight = () => {
         isLight ? "text-[#111827] bg-white " : " text-[#D1D5DB]"
       } bg-[#111827]`}
     >
-      © 2023 | Designed and coded with ❤️️ by Mostafa Elsaid
+      © 2023 | Designed and coded with ❤️️ by Mostafa Saeed
     </div>
   );
 };

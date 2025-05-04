@@ -5,6 +5,10 @@ import Cookies from "js-cookie";
 import PicShape from "./Shared/PicShape";
 import Lottie from "lottie-react";
 import dev from "../assets/Animations/dev.json";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaBehanceSquare } from "react-icons/fa";
+import { IoLocationOutline } from "react-icons/io5";
 
 const Home = () => {
   const isLight = useSelector((state) => state.colorMode.isLight);
@@ -34,14 +38,14 @@ const Home = () => {
             <p className={``}>{t("description")}</p>
           </div>
           <div className={`flex items-center gap-2`}>
-            <i className="pi pi-map-marker" style={{ fontSize: "1.25rem" }}></i>
+            <IoLocationOutline className="text-[1.5rem]" />
             <span>{t("location")}</span>
           </div>
 
           <ul className={`flex gap-4`}>
             <li>
               <a href="https://github.com/Mustafa-Al-Saeed" target="_blank">
-                <i className="pi pi-github" style={{ fontSize: "1.25rem" }}></i>
+                <FaGithub className="text-[2rem]" />
               </a>
             </li>
 
@@ -50,10 +54,16 @@ const Home = () => {
                 href="https://www.linkedin.com/in/mostafa-elsaeed-dev/"
                 target="_blank"
               >
-                <i
-                  className="pi pi-linkedin"
-                  style={{ fontSize: "1.25rem" }}
-                ></i>
+                <FaLinkedin className="text-[2rem]" />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.behance.net/mostafamahmoud99"
+                target="_blank"
+              >
+                <FaBehanceSquare className="text-[2rem]" />
               </a>
             </li>
           </ul>

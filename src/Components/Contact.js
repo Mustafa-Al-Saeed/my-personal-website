@@ -12,7 +12,7 @@ const Contact = () => {
   const lng = Cookies.get("i18next") || "en";
   const [showTextCopy, setShowTextCopy] = useState(false);
   const [showPhoneCopy, setShowPhoneCopy] = useState(false);
-  const textMail = "mostafa.developer01@gmail.com";
+  const textMail = "mostafa.m.a.saeed99@gmail.com";
   const Phone = "+201011020236";
 
   const handleTextCopy = () => {
@@ -51,14 +51,16 @@ const Contact = () => {
     >
       <div className={` flex flex-col gap-4 justify-center items-center`}>
         <h1
-          className={`px-5 py-1 flex items-center justify-center mx-auto font-bold ${
+          className={` flex items-center justify-center mx-auto font-bold text-[26px] md:text-[32px]  py-[10px]  px-[45px]  ${
             isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"
-          } bg-[#374151] w-[125px] h-[28px] rounded-xl text-sm `}
+          } bg-[#374151]   rounded-xl    `}
         >
           {t("Get in touch")}
         </h1>
 
-        <span className=" text-center max-w-[576px]">{t("contact desc")}</span>
+        <span className=" text-center pb-8 md:pb-0 w-full text-[18px] max-w-[576px]">
+          {t("contact desc")}
+        </span>
       </div>
 
       <div
@@ -68,7 +70,7 @@ const Contact = () => {
           <CiMail className="md:w-[32px] md:h-[32px] w-[20px] h-[20px]" />
 
           <span className=" font-bold text-[16px] md:text-[32px]">
-            mostafa.developer01@gmail.com
+            mostafa.m.a.saeed99@gmail.com
           </span>
 
           <div className={` relative`}>

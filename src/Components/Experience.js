@@ -42,17 +42,20 @@ const Experience = () => {
     >
       <div className={` flex flex-col gap-4 justify-center items-center`}>
         <h1
-          className={`px-5 py-1 flex items-center justify-center mx-auto font-bold ${
+          className={` flex items-center justify-center mx-auto font-bold text-[26px] md:text-[32px]  py-[10px]  px-[45px]  ${
             isLight ? "bg-[#E5E7EB]" : "bg-[#374151]"
-          } bg-[#374151] w-[115px] h-[28px] rounded-xl text-sm `}
+          } bg-[#374151]   rounded-xl    `}
         >
           {t("Experience")}
         </h1>
-        <span className=" text-center">{t("ExpDescription")}</span>
+        <span className=" text-center pb-8 md:pb-0 w-full text-[18px] ">
+          {t("ExpDescription")}
+        </span>
       </div>
 
       {experiences.map((experience, index) => (
         <div
+          key={index}
           className={`p-3 md:p-8 flex flex-col lg:flex-row gap-4 rounded-xl drop-shadow-lg ${
             isLight ? "bg-white" : "bg-[#1F2937]"
           }`}

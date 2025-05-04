@@ -106,7 +106,6 @@ const Header = () => {
                 style={{ fontSize: "1.5rem" }}
               ></i>
             </div>
-
             <div
               className={`cursor-pointer ${isLight ? "hidden" : "block"}`}
               onClick={() => dispatch(toLightMode())}
@@ -116,7 +115,6 @@ const Header = () => {
                 style={{ fontSize: "1.5rem" }}
               ></i>
             </div>
-
             <div
               className={`cursor-pointer ${isLight ? "block" : "hidden"}`}
               onClick={() => dispatch(toDarkMode())}
@@ -126,16 +124,6 @@ const Header = () => {
                 style={{ fontSize: "1.5rem" }}
               ></i>
             </div>
-
-            <button
-              className={`hover:text-[#38BDF8] whitespace-nowrap transition-colors py-[6px] ${
-                isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
-              } font-bold rounded-xl px-4`}
-            >
-              <a href={cv} download={fileName}>
-                {t("Download CV")}
-              </a>
-            </button>
           </div>
         </div>
       </div>
@@ -144,3 +132,13 @@ const Header = () => {
 };
 
 export default Header;
+
+// <button
+// className={`hover:text-[#38BDF8] whitespace-nowrap transition-colors py-[6px] ${
+//   isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
+// } font-bold rounded-xl px-4`}
+// >
+// <a href={cv} download={fileName}>
+//   {t("Download CV")}
+// </a>
+// </button>
