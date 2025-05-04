@@ -19,7 +19,7 @@ const Experience = () => {
         t("flojicsFifthPoint"),
         t("flojicsSixthPoint"),
       ],
-      date: "Jan 2024 - Jan 2024",
+      date: t("firstEXPDate"),
     },
     {
       company: "Freelance Front-end Web Developer",
@@ -29,7 +29,17 @@ const Experience = () => {
         t("freelanceSecondPoint"),
         t("freelanceThirdPoint"),
       ],
-      date: "Feb 2022 - Oct 2023",
+      date: t("secondEXPDate"),
+    },
+    {
+      company: "Freelance Projects - Graphic Designer",
+      position: "Graphic Designer",
+      points: [
+        t("thirdEXPFirstPoint"),
+        t("thirdEXPSecondPoint"),
+        t("thirdEXPThirdPoint"),
+      ],
+      date: t("thirdEXPDate"),
     },
   ];
 
