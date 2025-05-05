@@ -96,7 +96,7 @@ const Header = () => {
                 key={index}
                 className="flex items-center p-3 md:p-0 hover:text-[#38BDF8]"
               >
-                <a className="cursor-pointer" href={link.path}>
+                <a className="cursor-pointer w-full" href={link.path}>
                   {t(link.name)}
                 </a>
               </li>
