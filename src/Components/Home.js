@@ -51,7 +51,7 @@ const Home = () => {
 
             <li>
               <a
-                href="https://www.linkedin.com/in/mostafa-elsaeed-dev/"
+                href="https://www.linkedin.com/in/mostafa-saeed-5963071b0/"
                 target="_blank"
               >
                 <FaLinkedin className="text-[2rem]" />
