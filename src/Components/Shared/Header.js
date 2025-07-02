@@ -64,85 +64,87 @@ const Header = () => {
           : ""
       }`}
     >
-      <div className="container flex items-center justify-between md:justify-center">
-        <div className="cursor-pointer md:hidden">
-          {listStatus ? (
-            <i
-              onClick={changeListStatus}
-              className="pi pi-times hover:text-[#38BDF8]"
-              style={{ fontSize: "1.5rem" }}
-            ></i>
-          ) : (
-            <i
-              onClick={changeListStatus}
-              className="pi pi-align-justify hover:text-[#38BDF8]"
-              style={{ fontSize: "1.5rem" }}
-            ></i>
-          )}
-        </div>
+      <div className="container flex items-center justify-between ">
+        <div className="flex gap-3">
+          <div className="cursor-pointer md:hidden">
+            {listStatus ? (
+              <i
+                onClick={changeListStatus}
+                className="pi pi-times hover:text-[#38BDF8]"
+                style={{ fontSize: "1.5rem" }}
+              ></i>
+            ) : (
+              <i
+                onClick={changeListStatus}
+                className="pi pi-align-justify hover:text-[#38BDF8]"
+                style={{ fontSize: "1.5rem" }}
+              ></i>
+            )}
+          </div>
 
-        <div className={` flex gap-3 `}>
-          <ul
-            className={`z-50 overflow-hidden ${
-              listStatus ? "h-[257px]" : "h-0 md:h-[68px]"
-            } transition-all absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 ${
-              isLight
-                ? "bg-white md:bg-transparent"
-                : "bg-[#030712] md:bg-transparent"
-            } w-full md:w-fit`}
-          >
-            {links.map((link, index) => (
-              <li
-                key={index}
-                className="flex items-center p-3 md:p-0 hover:text-[#38BDF8]"
+          <div className={` flex gap-3 `}>
+            <ul
+              className={`z-50 overflow-hidden ${
+                listStatus ? "h-[257px]" : "h-0 md:h-[68px]"
+              } transition-all absolute md:relative flex flex-col md:flex-row gap-4 top-[68px] md:top-0 left-0 ${
+                isLight
+                  ? "bg-white md:bg-transparent"
+                  : "bg-[#030712] md:bg-transparent"
+              } w-full md:w-fit`}
+            >
+              {links.map((link, index) => (
+                <li
+                  key={index}
+                  className="flex items-center p-3 md:p-0 hover:text-[#38BDF8]"
+                >
+                  <a className="cursor-pointer w-full" href={link.path}>
+                    {t(link.name)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center gap-3">
+              <div className="cursor-pointer" onClick={toggleLanguage}>
+                <i
+                  className="pi pi-language hover:text-[#38BDF8] transition-colors"
+                  style={{ fontSize: "1.5rem" }}
+                ></i>
+              </div>
+              <div
+                className={`cursor-pointer ${isLight ? "hidden" : "block"}`}
+                onClick={() => dispatch(toLightMode())}
               >
-                <a className="cursor-pointer w-full" href={link.path}>
-                  {t(link.name)}
-                </a>
-              </li>
-            ))}
-          </ul>
-
-          <div className="flex items-center gap-3">
-            <div className="cursor-pointer" onClick={toggleLanguage}>
-              <i
-                className="pi pi-language hover:text-[#38BDF8] transition-colors"
-                style={{ fontSize: "1.5rem" }}
-              ></i>
-            </div>
-            <div
-              className={`cursor-pointer ${isLight ? "hidden" : "block"}`}
-              onClick={() => dispatch(toLightMode())}
-            >
-              <i
-                className="pi pi-sun hover:text-[#38BDF8] transition-colors"
-                style={{ fontSize: "1.5rem" }}
-              ></i>
-            </div>
-            <div
-              className={`cursor-pointer ${isLight ? "block" : "hidden"}`}
-              onClick={() => dispatch(toDarkMode())}
-            >
-              <i
-                className="pi pi-moon hover:text-[#38BDF8] transition-colors"
-                style={{ fontSize: "1.5rem" }}
-              ></i>
+                <i
+                  className="pi pi-sun hover:text-[#38BDF8] transition-colors"
+                  style={{ fontSize: "1.5rem" }}
+                ></i>
+              </div>
+              <div
+                className={`cursor-pointer ${isLight ? "block" : "hidden"}`}
+                onClick={() => dispatch(toDarkMode())}
+              >
+                <i
+                  className="pi pi-moon hover:text-[#38BDF8] transition-colors"
+                  style={{ fontSize: "1.5rem" }}
+                ></i>
+              </div>
             </div>
           </div>
         </div>
+
+        <button
+          className={`hover:text-[#38BDF8] whitespace-nowrap transition-colors py-[6px] ${
+            isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
+          } font-bold rounded-xl px-4`}
+        >
+          <a href={cv} download={fileName}>
+            {t("Download CV")}
+          </a>
+        </button>
       </div>
     </div>
   );
 };
 
 export default Header;
-
-// <button
-// className={`hover:text-[#38BDF8] whitespace-nowrap transition-colors py-[6px] ${
-//   isLight ? "bg-[#030712] text-white" : "bg-white text-[#030712]"
-// } font-bold rounded-xl px-4`}
-// >
-// <a href={cv} download={fileName}>
-//   {t("Download CV")}
-// </a>
-// </button>
